@@ -1,9 +1,23 @@
-<html lang='en'>
-    <head>
-        <title>Home</title>
-    </head>
-    <body>
-        <h1>Welcome to the greatest site on earth</h1>
-    </body>
-</html>
+
+{% extends 'base.html' %}
+
+{% block title %}Royal Hotels{% endblock %}
+
+{% block header %}Welcome to the Royal Hotels!{% endblock %}
+
+
+{% block content %}
+
+{% for product in products %}
+    <ul>
+        {% if product == 'Apples' %}
+        <li>#{{ product }}</li>
+        {% else %}
+        <li>{{ product }}</li>
+        {% endif %}
+    </ul>
+{% endfor %}
+
+{% endblock %}
+
 <!--Go to settings to configure-->
